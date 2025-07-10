@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Claim Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="overlay">
+    <div class="result-container">
+      <h1>Claim Result</h1>
+      <p><strong>Expected Charge:</strong> ${{ expected }}</p>
+      <p><strong>Your Claim:</strong> ${{ claim }}</p>
+      <p><strong>Difference (Residual):</strong> ${{ residual }}</p>
+      <p><strong>Claim/Expected Ratio:</strong> {{ ratio }}</p>
+      <p><strong>Is Anomaly?</strong> {{ is_anomaly }}</p>
+      <p><strong>Anomaly Probability:</strong> {{ prob }}%</p>
+      <a href="/" class="back-btn">Check Another</a>
+    </div>
+  </div>
+</body>
+</html>

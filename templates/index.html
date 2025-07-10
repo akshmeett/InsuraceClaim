@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Insurance Claim Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="overlay">
+    <div class="form-container">
+      <h1>Insurance Claim Checker</h1>
+      <form action="/predict" method="post">
+        <label>Age:</label>
+        <input type="number" name="age" required>
+
+        <label>Sex:</label>
+        <select name="sex">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <label>BMI:</label>
+        <input type="number" name="bmi" step="0.1" required>
+
+        <label>Children:</label>
+        <input type="number" name="children" required>
+
+        <label>Smoker:</label>
+        <select name="smoker">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label>Region:</label>
+        <select name="region">
+          <option value="0">Southwest</option>
+          <option value="1">Southeast</option>
+          <option value="2">Northwest</option>
+          <option value="3">Northeast</option>
+        </select>
+
+        <label>Claim Amount ($):</label>
+        <input type="number" name="claim_amount" step="0.01" required>
+
+        <button type="submit">Check Claim</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
